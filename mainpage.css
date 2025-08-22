@@ -1,0 +1,260 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    line-height: 1.6;
+    font-family: Arial;
+}
+/* header */
+header{
+    background-color: rgb(65,187,234);
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+}
+/* nav bar */
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+nav a{
+    color: white;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: gray;
+}
+/* main Section */
+.main{
+    background: url(#) no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 0 2px 4px black;
+    text-align: center;
+    clip-path: polygon(0% 0%, 100% 0%,100% 90%,0% 100%);
+}
+.main h1{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+.main p{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.main button{
+    padding: 0.75rem 1.5rem;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0,3s;
+}
+.main button:hover{
+    background: rgb(48, 48, 195);
+}
+/* featured products */
+.container{
+    padding: 3rem;
+    max-width: 1200px;
+    margin:0 auto;
+}
+.container h2{
+    color: #0066cc;
+    text-align: center;
+}
+.main_div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.card{
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px gray;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover{
+    transform:translatey(-5px);
+    box-shadow: 0 6px 12px gray;
+}
+.card img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.card h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #0066cc;
+}
+.card p{
+    margin-bottom: 1rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+.card button{
+    padding: 0.75rem;
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+.card  button:hover{
+    background: #004d99;
+}
+/* Our Services */
+.grid{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.service_card{
+    background: #f4f4f4;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+/* client comment */
+.comment{
+    background: rgb(255, 130, 37);
+    padding: 2rem;
+    text-align: center;
+}
+.comment p{
+    margin: 1rem auto;
+    max-width: 600px;
+    font-style: italic;
+}
+.pricing{
+    background: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+.pricing h2{
+    color: #0066cc;
+}
+.table{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px, 1fr));
+    gap: 1rem;
+}
+.pricing_plan{
+    background: url(#) no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+}
+.blog{
+    padding: 2rem;
+    background: #f4f4f4;
+}
+.blog_post{
+    margin-bottom: 2rem;
+}
+.gallery{
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+.gallery h2{
+    color: #0066cc;
+}
+.gallery img{
+    min-width: 250px;
+    max-width: 400px;
+    height: auto;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+.faq{
+    padding: 2rem;
+    background: #444;
+    color: white;
+}
+.faq_item{
+    margin-bottom: 1.5rem;
+}
+.faq_item h3{
+    font-size: 1.25rem;
+    color: white;
+}
+
+form{
+    max-width: 600px;
+    margin: auto;
+}
+form input,
+form textarea,
+form button{
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+}
+footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+footer .social{
+    margin-top: 1rem;
+}
+footer .social img{
+    width: 50px;
+}
+
+
+@media(max-width:768px){
+    .main h1{
+        font-size: 2rem;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+        position: static;
+    }
+    .main_div,
+    .table{
+        grid-template-columns: 1fr;
+    }
+    .gallery img{
+        width: 100%;
+    }
+    .container{
+        padding: 2rem;
+    }
+    form{
+        width: 100%;
+    }
+    .card{
+        padding: 2rem;
+    }
+    footer{
+        padding: 1.5rem 0;
+    }
+}
